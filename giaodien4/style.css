@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.header__logo img {
+  height: 50px;
+}
+
+.search {
+  /* background-color: green; */
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search input[type=search] {
+  height: 40px;
+  width: 70%;
+}
+
+.search__btn {
+  height: 40px;
+  width: 40px;
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0px;
+}
+
+.header__cart p {
+  background-color: #FF3399;
+  display: inline-block;
+  padding: 8px 10px;
+  color: white;
+}
+
+.menu {
+  height: 40px;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul {}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  line-height: 40px;
+  padding: 0 40px;
+  display: block;
+}
+
+.menu ul li a:hover {
+  background-color: #fff;
+  color: red;
+}
+
+.sidebar {
+  height: 1000px;
+  width: 20%;
+  /* background-color: aqua; */
+}
+
+.sidebar h1 {
+  font-size: 20px;
+  margin: 8px 16px;
+}
+
+.sidebar a {
+  color: black;
+  text-decoration: none;
+  margin: 8px 24px;
+}
+
+
+.content {
+  width: 80%;
+  height: 600px;
+  /* background-color: pink; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content .sale {
+  height: 70px;
+  width: 100%;
+  /* background-color: yellow; */
+  color: red;
+  font-size: 40px;
+  text-align: center;
+  line-height: 70px;
+}
+
+.product {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.product__img {
+  display: flex;
+  justify-content: center;
+}
+
+.product__img img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.product__desc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #003366;
+}
+
+.product__desc h1 {
+  color: yellow;
+}
+
+.product__desc p {
+  color: white;
+}
+
+.product__desc p del {
+  color: red;
+}
