@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td> <label for="inputInt">Nhập số nguyên: </label> </td>
+          <td> <input type="text" name="" id="inputInt"></td>
+        </tr>
+        <tr>
+          <td> <label for="res">Số chữ số lẻ: </label> </td>
+          <td> <input type="text" name="" id="res"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <input type="button" value="Đếm" onclick="solve()">
+        <input type="button" value="Hủy bỏ" onclick="cancel()">
+      </div>
+    </form>
+
+    <script>
+      function solve() {
+        var n = parseInt(document.getElementById('inputInt').value);
+        var cnt = 0;
+        while (n) {
+          if ((n % 10) % 2 == 1) ++cnt;
+          n /= 10;
+        }
+        document.getElementById('res').value = cnt;
+      }
+
+      function cancel() {
+        document.getElementById('inputInt').value = "";
+        document.getElementById('res').value = "";
+      }
+    </script>
+
+
+  </body>
+
+
+
+
+</html>
