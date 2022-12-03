@@ -233,7 +233,7 @@
 }
 
 .menu {
-  height: auto;
+  height: 500px;
   width: 25vw;
   /* background-color: #999; */
   border: 1px solid var(--blue);
@@ -317,8 +317,8 @@
 }
 
 .content {
-  height: 500px;
-  width: 74vw;
+  height: 600px;
+  width: 75vw;
   /* background-color: #999; */
   display: flex;
   flex-wrap: wrap;
