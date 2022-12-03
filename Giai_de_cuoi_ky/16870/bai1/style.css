@@ -234,7 +234,7 @@
 
 .menu {
   height: 500px;
-  width: 25vw;
+  width: 25%;
   /* background-color: #999; */
   border: 1px solid var(--blue);
   /* position: relative; */
@@ -318,7 +318,7 @@
 
 .content {
   height: 600px;
-  width: 75vw;
+  width: 75%;
   /* background-color: #999; */
   display: flex;
   flex-wrap: wrap;
@@ -346,6 +346,7 @@
   height: 40px;
   display: flex;
   align-items: center;
+  margin-right: 20px;
 }
 
 .heading__sort select {
