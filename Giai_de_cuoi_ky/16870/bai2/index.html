@@ -32,8 +32,9 @@
         var n = parseInt(document.getElementById('inputInt').value);
         var cnt = 0;
         while (n) {
-          if ((n % 10) % 2 == 1) ++cnt;
-          n /= 10;
+          if ((n % 10) % 2 == 1) { ++cnt };
+          console.log(n);
+          n = Math.floor(n / 10);
         }
         document.getElementById('res').value = cnt;
       }
