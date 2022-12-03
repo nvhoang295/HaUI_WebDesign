@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn input[type="reset"] {
+  margin-left: 10px;
+}
+
+.btn input {
+  padding: 5px;
+}
+
+td:nth-child(1) {
+  font-weight: bold;
+  width: 300px;
+}
