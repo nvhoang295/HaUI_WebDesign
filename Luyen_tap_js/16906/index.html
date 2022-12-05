@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td>Nhập chuỗi: </td>
+          <td><input type="text" name="" id="str"></td>
+        </tr>
+        <tr>
+          <td>Số từ có 4 ký tự</td>
+          <td><input type="text" name="" id="ans"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <input type="button" value="Tìm" onclick="solve()">
+        <input type="reset" value="Hủy bỏ">
+      </div>
+    </form>
+
+
+
+    <script>
+      function solve() {
+        var str = document.getElementById('str').value;
+        if (str.length > 255) {
+          alert('Bạn nhập quá 255 ký tự');
+        } else {
+          var cnt = 0;
+          var cntWord = 1;
+          var i = 0;
+          while (i < str.length) {
+            if (str[i] == ' ') { ++i; cntWord = 1; }
+            else {
+              ++cntWord;
+              if ((str[i + 1] == ' ' || i == str.length - 1) && cntWord == 4) { ++cnt; cntWord = 1; };
+              i++;
+            }
+          }
+          document.getElementById('ans').value = cnt;
+        }
+
+      }
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    input[type=button] {
+      margin-right: 10px;
+    }
+  </style>
+
+
+
+
+
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <th>Họ và tên: </th>
+          <td><input type="text" id="fullName"></td>
+        </tr>
+        <tr>
+          <th>Tên: </th>
+          <td><input type="text" name="" id="ans"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <input type="button" value="Hiển thị" onclick="solve()">
+        <input type="reset" value="Hủy bỏ">
+      </div>
+    </form>
+  </body>
+
+  <script>
+    function solve() {
+      var fullName = document.getElementById('fullName').value;
+      const words = new Array();
+      var tmp = '';
+      var i = 0;
+      while (i < fullName.length) {
+        if (fullName[i] == ' ') ++i;
+        else {
+          tmp += fullName[i];
+          if (fullName[i + 1] == ' ' || i == fullName.length - 1) {
+            words.push(tmp);
+            tmp = '';
+            console.log(tmp);
+          }
+          i++;
+        }
+      }
+      document.getElementById('ans').value = (words[words.length - 1]);
+    }
+  </script>
+
+
+
+
+
+
+</html>

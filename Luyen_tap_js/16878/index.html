@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td>Nhập số thứ nhất</td>
+          <td><input type="text" name="" id="a"></td>
+        </tr>
+        <tr>
+          <td>Nhập số thứ hai</td>
+          <td><input type="text" name="" id="b"></td>
+        </tr>
+        <tr>
+          <td>UCLN của hai số trên là: </td>
+          <td><input type="text" name="" id="ans"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <input type="button" value="Tìm" onclick="solve()">
+        <input type="reset" value="Hủy bỏ">
+      </div>
+    </form>
+    <script>
+      function lcm(a, b) {
+        var r;
+        while (b) {
+          r = a % b;
+          a = b;
+          b = r;
+        }
+        return a;
+      }
+
+      function solve() {
+        var a = document.getElementById('a').value;
+        var b = document.getElementById('b').value;
+        document.getElementById('ans').value = lcm(a, b);
+      }
+    </script>
+
+
+
+
+
+  </body>
+
+</html>

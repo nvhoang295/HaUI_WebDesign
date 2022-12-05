@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td>Nhập số nguyên</td>
+          <td><input type="text" name="" id="n"></td>
+        </tr>
+        <tr>
+          <td>Số chữ số lẻ</td>
+          <td><input type="text" name="" id="ans"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <input type="button" value="Đếm" onclick="solve()">
+        <input type="reset" value="Hủy bỏ">
+      </div>
+    </form>
+
+    <script>
+      function solve() {
+        var n = document.getElementById('n').value;
+        var cnt = 0;
+        while (n) {
+          if ((n % 10) % 2 == 1) ++cnt;
+          n = Math.floor(n / 10);
+        }
+        document.getElementById('ans').value = cnt;
+      }
+    </script>
+
+
+
+
+  </body>
+
+</html>
