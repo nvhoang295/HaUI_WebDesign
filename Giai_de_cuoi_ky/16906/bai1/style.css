@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+:root {
+  --pink: #f39;
+  --green: #003366;
+  --yellow: #ff6;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  /* background-color: #000; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header__logo {
+  height: 100%;
+  width: 15%;
+  /* background-color: #777; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo img {
+  height: 50%;
+}
+
+.search {
+  height: 100%;
+  flex-grow: 1;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input[type="search"] {
+  padding-left: 20px;
+  height: 50%;
+  width: 60%;
+}
+
+.search select {
+  height: 50%;
+  padding: 0 10px;
+  border-left: 0px solid #000;
+}
+
+.search__btn {
+  height: 50%;
+  aspect-ratio: 1/1;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 5px 5px 0;
+}
+
+.search__btn i {
+  color: white;
+  font-size: 20px;
+}
+
+.header__cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+}
+
+.cart-btn {
+  background-color: var(--pink);
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: white;
+}
+
+.cart-btn:hover {
+  background-color: yellow;
+  color: red;
+}
+
+.menu {
+  height: 40px;
+  width: 100%;
+  background-color: #000;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.menu ul li {
+  list-style-type: none;
+  padding: 0 20px;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+.menu ul li:hover {
+  background-color: var(--pink);
+}
+
+.menu ul li:nth-child(3) {
+  position: relative;
+}
+
+.menu ul li:nth-child(3):hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  width: 100px;
+}
+
+.submenu__heading {
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--pink);
+}
+
+.submenu ul {
+  flex-direction: column;
+}
+
+.submenu ul li {
+  width: 100%;
+}
+
+.submenu ul li a {
+  color: black;
+}
+
+.content {
+  width: 100%;
+  height: 500px;
+  /* background-color: #555; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content__top {
+  height: 50px;
+  width: 100%;
+  /* background-color: #999; */
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top__left {
+  display: flex;
+  margin-left: 20px;
+}
+
+.cate {
+  padding: 0 70px 0 10px;
+  margin-left: 10px;
+}
+
+.active-btn {
+  color: white;
+  background-color: #000;
+}
+
+.sort {
+  padding: 0 20px 0 10px;
+  margin-left: 10px;
+}
+
+.top-btn {
+  padding: 7px;
+  border: 1px solid gray;
+}
+
+.margin-top-btn {
+  margin-right: 10px;
+}
+
+.padding-top-left-btn {
+  padding: 7px 11px 7px 11px;
+}
+
+.top__right {
+  display: flex;
+}
+
+.product-container {
+  height: 500px;
+  width: 100%;
+  /* background-color: green; */
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+}
+
+.product {
+  width: 400px;
+  height: 300px;
+  background-color: yellow;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product__img {
+  width: 400px;
+  height: 200px;
+  position: relative;
+}
+
+.product__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.product__img:hover img {
+  width: 450px;
+  height: 250px;
+  position: absolute;
+  z-index: 1000;
+}
+
+.infor {
+  width: 100%;
+  height: 120px;
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  margin: 8px 0;
+}
+
+.rate i {
+  color: var(--yellow);
+}
+
+.name:hover {
+  color: var(--yellow);
+}
+
+.price {
+  display: flex;
+  margin-top: 10px;
+}
+
+.price--new {
+  color: red;
+  /* align-self: flex-end; */
+  font-size: 18px;
+}
+
+.price--old {
+  color: white;
+  font-size: 17px;
+  /* font-size: 12px; */
+  /* align-self: flex-end; */
+  padding-left: 5px;
+  text-decoration: line-through;
+}
