@@ -129,6 +129,7 @@
 
 .menu ul li:nth-child(3):hover .submenu {
   display: block;
+  z-index: 10000;
 }
 
 .submenu {
@@ -137,6 +138,7 @@
   left: 0;
   background-color: #fff;
   width: 100px;
+  z-index: 10;
 }
 
 .submenu__heading {
@@ -150,6 +152,7 @@
 
 .submenu ul {
   flex-direction: column;
+  z-index: 1000;
 }
 
 .submenu ul li {
@@ -236,7 +239,8 @@
 .product__img {
   width: 400px;
   height: 200px;
-  position: relative;
+  /* position: relative; */
+  z-index: -1;
 }
 
 .product__img img {
@@ -247,8 +251,8 @@
 .product__img:hover img {
   width: 450px;
   height: 250px;
-  position: absolute;
-  z-index: 1000;
+  /* position: absolute; */
+  /* z-index: -1; */
 }
 
 .infor {
