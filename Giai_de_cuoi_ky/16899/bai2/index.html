@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td>Họ và tên: </td>
+          <td><input type="text" name="" id="fullname"></td>
+        </tr>
+        <tr>
+          <td>Tên</td>
+          <td><input type="text" name="" id="ans"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <input type="button" value="Hiển thị" onclick="solve()">
+        <input type="reset" value="Hủy bỏ">
+      </div>
+    </form>
+
+
+    <script>
+      function solve() {
+        var fullname = document.getElementById('fullname').value;
+        const words = new Array();
+        var tmp = '';
+        var i = 0;
+        while (i < fullname.length) {
+          if (fullname[i] == ' ') ++i;
+          else {
+            tmp += fullname[i];
+            if (fullname[i + 1] == ' ' || i == fullname.length - 1) {
+              words.push(tmp);
+              tmp = '';
+            }
+            i++;
+          }
+          document.getElementById('ans').value = words[words.length - 1];
+        }
+      }
+    </script>
+  </body>
+
+</html>
