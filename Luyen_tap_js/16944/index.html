@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regexp</title>
+  </head>
+
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td>Username</td>
+          <td><input type="text" name="" id="username"></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type="password" name="" id="password"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <input type="button" value="Check" onclick="check()">
+      </div>
+    </form>
+
+    <script>
+      function check() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        if (username == '') {
+          alert('Vui long khong de trong username');
+        }
+        if (password == '') {
+          alert('Vui long khong de trong password')
+        } else {
+          var pattern = /^(?=[a-zA-Z].*)(?=.*[A-Z].*)(?=.*[0-9].*)[a-zA-Z0-9]{8,}$/;
+          if (pattern.test(password)) {
+            alert('Ban nhap dung tieu chuan password');
+          } else {
+            alert('Ban nhap sai tieu chuan password');
+          }
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      var pattern = /^(?=[A-Za-z].*)(?=.*[A-Z].*)(?=.*[0-9].*)[A-Za-z\d]{8,}$/;
+    </script>
+
+
+
+
+  </body>
+
+</html>
