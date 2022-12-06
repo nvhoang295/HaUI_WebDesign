@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+
+    td:nth-child(1) {
+      font-weight: bold;
+    }
+  </style>
+
+
+
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td>Tháng</td>
+          <td><input type="text" name="" id="month"></td>
+        </tr>
+        <tr>
+          <td>Năm</td>
+          <td><input type="text" name="" id="year"></td>
+        </tr>
+        <tr>
+          <td>Số ngày</td>
+          <td><input type="text" name="" id="ans"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <input type="button" value="Hiển thị số ngày của tháng" onclick="check()">
+      </div>
+    </form>
+
+    <script>
+      function solve(month, year) {
+        if (month == 2) {
+          if (year % 4 == 0) {
+            return '29 ngày';
+          } else {
+            return '28 ngày';
+          }
+        } else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+          return '30 ngày';
+        } else {
+          return '31 ngày';
+        }
+      }
+
+      function check() {
+        var month = document.getElementById('month').value;
+        var year = document.getElementById('year').value;
+        document.getElementById('ans').value = solve(month, year);
+      }
+    </script>
+  </body>
+
+</html>
