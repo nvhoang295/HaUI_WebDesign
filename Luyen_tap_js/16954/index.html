@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+
+    caption {
+      font-weight: bold;
+    }
+  </style>
+
+  <body>
+    <form action="">
+      <table>
+        <caption>Sắp xếp mảng</caption>
+        <tr>
+          <td>Nhập mảng: </td>
+          <td><input type="text" name="" id="arr"></td>
+        </tr>
+        <tr>
+          <td>Mảng sau khi sắp xếp: </td>
+          <td><input type="text" name="" id="ans"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <input type="reset" value="Hủy">
+        <input type="button" value="Sắp xếp" onclick="solve()">
+      </div>
+    </form>
+
+    <script>
+      function isNumber(s) {
+        return s == '1' || s == '2' || s == '3' || s == '4' || s == '5' || s == '6' || s == '7' || s == '8' || s == '9' || s == '0';
+      }
+
+      function solve() {
+        var tmp = document.getElementById('arr').value;
+        var i = 0;
+        const arr = new Array();
+        while (i < tmp.length) {
+          if (tmp[i] == ' ' || tmp[i] == ',') ++i;
+          else {
+            if (isNumber(tmp[i]) == true) {
+              arr.push(parseInt(tmp[i]));
+            }
+            i++;
+          }
+        }
+        var evenArr = new Array();
+        var zeroArr = new Array();
+        var oddArr = new Array();
+        i = 0;
+        console.log(1);
+        while (i < arr.length) {
+          if (arr[i] == 0) {
+            zeroArr.push(arr[i++]);
+          } else if (arr[i] % 2 == 0) {
+            evenArr.push(arr[i++]);
+          } else {
+            oddArr.push(arr[i++]);
+          }
+        }
+        var ans = '';
+        for (var i = 0; i < evenArr.length; i++) {
+          ans = ans + evenArr[i] + ',';
+        }
+        for (var i = 0; i < zeroArr.length; i++) {
+          ans = ans + zeroArr[i] + ',';
+        }
+        for (var i = 0; i < oddArr.length; i++) {
+          ans = ans + oddArr[i]; {
+            if (i != oddArr.length - 1) {
+              ans += ',';
+            }
+          }
+        }
+        document.getElementById('ans').value = ans;
+      }
+    </script>
+
+
+
+  </body>
+
+</html>
