@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function solve() {
+        var s = document.getElementById('s').value;
+        var w = document.getElementById('w').value;
+        var reg = new RegExp(w, "g");
+        const res = s.match(reg);
+        document.getElementById('ans').value = res.length;
+      }
+    </script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+      }
+
+      td:nth-child(1) {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td>Nhập chuỗi: </td>
+          <td><input type="text" name="" id="s"></td>
+        </tr>
+        <tr>
+          <td>Nhập từ: </td>
+          <td><input type="text" name="" id="w"></td>
+        </tr>
+        <tr>
+          <td>Thông báo: </td>
+          <td><input type="text" name="" id="ans"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <input type="button" value="Kiểm tra" onclick="solve()">
+        <input type="reset" value="Hủy bỏ">
+      </div>
+    </form>
+
+
+
+
+
+
+
+
+
+  </body>
+
+</html>

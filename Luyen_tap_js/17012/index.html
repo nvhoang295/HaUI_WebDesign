@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+
+
+  <style>
+    td:nth-child(2) {
+      width: 500px;
+    }
+
+    input[type=text] {
+      width: 500px;
+    }
+  </style>
+
+
+
+  <body>
+    <form action="">
+      <table>
+        <caption>Tìm từ dài nhất</caption>
+        <tr>
+          <td>Nhập xâu: </td>
+          <td><input type="text" name="" id="s"></td>
+        </tr>
+        <tr>
+          <td>Thông báo kết quả: </td>
+          <td><input type="text" name="" id="ans"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <input type="reset" value="Xóa">
+        <input type="button" value="Tìm kiếm" onclick="solve()">
+      </div>
+    </form>
+
+
+    <script>
+      function solve() {
+        var s = document.getElementById('s').value;
+        var i = 0;
+        var cnt = 1, recCnt = -1, recIdx = -1;
+        while (i < s.length) {
+          if (s[i] == ' ') {
+            cnt = 1;
+            ++i;
+          }
+          else {
+            ++cnt;
+            if (cnt > recCnt) {
+              recCnt = cnt;
+              recIdx = i;
+            }
+            ++i;
+          }
+        }
+        var ans = '';
+        for (var i = recIdx - recCnt + 2; i <= recIdx; i++) {
+          ans += s[i];
+        }
+        document.getElementById('ans').value = 'Từ dài nhất là ' + ans + ' xuất hiện ở vị trí ' + (recIdx - recCnt + 2);
+      }
+
+
+    </script>
+
+
+
+
+  </body>
+
+</html>
